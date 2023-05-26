@@ -31,14 +31,23 @@ const timer = ()=>{
 startTimer.addEventListener("click", ()=>{
     // 10 for milliseconds and 1000 for seconds
     timeinterval = setInterval(timer, 10);
+    startTimer.setAttribute(`disabled`, ``)
+    stopTimer.removeAttribute("disabled");
+    resetTimer.removeAttribute("disabled")
 });
 stopTimer.addEventListener("click", ()=>{
     clearInterval(timeinterval);
+    startTimer.removeAttribute(`disabled`, ``)
+    stopTimer.setAttribute("disabled", ``);
+    resetTimer.removeAttribute("disabled")
 })
 resetTimer.addEventListener("click", ()=>{
     clearInterval(timeinterval);
     secs=0;
     millisecs =0;
     seconds.innerHTML="00";
-    milliseconds.innerHTML="00";    
+    milliseconds.innerHTML="00";
+    startTimer.removeAttribute(`disabled`)
+    stopTimer.removeAttribute("disabled");
+    resetTimer.setAttribute("disabled", ``)
 })
