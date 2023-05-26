@@ -1,0 +1,9 @@
+#title, #body, #image, #footer {
+    background-color:grey;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    min-height: 50px;
+    margin-top: 25px;
+    padding: 10px;
+}
