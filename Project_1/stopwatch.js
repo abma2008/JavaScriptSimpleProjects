@@ -29,6 +29,7 @@ const timer = ()=>{
 // adding event listeners to the buttons: start, stop, and reset:
 
 startTimer.addEventListener("click", ()=>{
+    // 10 for milliseconds and 1000 for seconds
     timeinterval = setInterval(timer, 10);
 });
 stopTimer.addEventListener("click", ()=>{
