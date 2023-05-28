@@ -1,5 +1,8 @@
+body {
+    background-image:linear-gradient(black, brown)
+}
 #title, #body, #image, #footer {
-    background-color:grey;
+    background-image:linear-gradient(black, white);
     border-radius: 10px;
     min-height: 40px;
     margin: auto;
@@ -9,10 +12,18 @@
 }
 .div_container {
     margin-top: 20px;
-    background-color:lightgrey;
+    background-image:linear-gradient(#ffff, blue);
     width: 50%;
     margin: auto;
+    box-shadow: 10px 10px 10px 10px;
+    color:brown;
+    font-weight:bolder;
+    margin-top:20px;
     
+}
+.div_container h1 {
+    color:white;
+    background-image:linear-gradient(blue,white)
 }
 
 #footer {
@@ -20,15 +31,27 @@
     align-items: center;
     gap: 2rem;
     justify-content: space-evenly;
+    padding:20px;
 }
-#img {
-    width: 100%;
-    height: 100%;
-    padding: 10px 10px;
-    border-radius: 20px solid red;
+button {
+    width:100px;
+}
+button:hover{
+    box-shadow:10x 4px 4px 10px;
+}
+#image{
+    border:4px solid brown;
+
+}
+#image #img {
+    width:100%;
+}
+#title, #body{
+    color:black;
+    box-shadow:5px 5px 5px 5px;
 }
 @media(max-width: 700px){
-    #img {
+    #image {
         width: 100%;
         height:auto;
     }

@@ -12,17 +12,17 @@
 const cards =[
     {
         card_title: `I am card one`,
-        card_body: `I am the card body`,
+        card_body: `This is the Description of The first card. Do you see it or not?`,
         card_image: `./images/card1.png`,
     },
     {
         card_title: `I am card two`,
-        card_body: `I am the card body`,
+        card_body: `This is the Description of the second card. Do you see it or not?`,
         card_image: `./images/card2.png`,
     },
     {
         card_title: `I am card three`,
-        card_body: `I am the card body`,
+        card_body: `This is the description of the third card. Do you see it or not?`,
         card_image: `./images/card3.png`,
     },
     {
