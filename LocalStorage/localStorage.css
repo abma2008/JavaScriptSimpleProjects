@@ -59,4 +59,8 @@ body {
 
 .completed {
     background-color:lightgreen;
+    
+}
+.completed:hover{
+    background-color:lightgreen;
 }

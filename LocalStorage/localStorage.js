@@ -55,19 +55,24 @@ function deleteTask(taskid){
         showCancelButton: true
     }).then((result)=>{
         if(result.isConfirmed){
-            for(let i=0; i <arrayOfTasks.length; i++){
-            if(arrayOfTasks[i].id == taskid){
-                arrayOfTasks.pop(i);
-            }
+            // this is one way to go:
+            // =============================================
+            // for(let i=0; i <arrayOfTasks.length; i++){
+            // if(arrayOfTasks[i].id == taskid){
+            //     arrayOfTasks.pop(i);
+            // }
+            // ==============================================
+            // Second way, using filter():
+            arrayOfTasks = arrayOfTasks.filter((task)=> task.id != taskid)
             // updating the localStorage:
             localStorage.setItem(`tasks`, JSON.stringify(arrayOfTasks));
             console.clear();
             console.table(arrayOfTasks);
         }
         
-    }
 })
 }
+
 
 
 
@@ -136,10 +141,16 @@ deleteButton.onclick=()=>{
         showConfirmButton: true
     }).then((result)=>{
         if(result.isConfirmed){
+            console.clear(); // placing it here to see the results fresh
+            if(arrayOfTasks.length > 0){
+                console.log(`All Tasks have been removed successfully!`);
+            }else{
+                console.log(`No tasks to delete!!!!!!!!!!!!`);
+            }
             arrayOfTasks = []; //emptying the arrayOfTask
             localStorage.removeItem(`tasks`);
-            console.clear();
-            console.log(`All Tasks have been removed successfully!`);
+            
+            
             // setting the divTasks to empty innerHTML:
             divTasks.innerHTML=``;
         }
