@@ -1,0 +1,62 @@
+body {
+    background-image: linear-gradient(brown, black);
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+.container {
+    background-image: linear-gradient(brown, black);
+    background-repeat: no-repeat;
+    border: 2px solid bisque;
+    border-radius: 10px;
+    width: 75%;
+    padding: 20px;
+}
+#form {
+    padding: 10px;
+        
+}
+#form button {
+    min-width:auto;
+}
+#form input {
+    background-image:linear-gradient(yellow, red);
+    font-weight:bolder;
+    color: black;
+}
+#h1-header {
+    font-size:25px;
+    box-shadow: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#h1-header:hover{
+    color:bisque;
+    text-decoration: red;
+}
+
+.tasks {
+    min-height:40px;
+    background-image: linear-gradient(white, brown);
+    border-radius: 10px;
+    margin-bottom:20px;
+    width: 100%;
+    margin: auto;
+    padding: 15px;
+    font-weight: bolder;
+
+}
+.tasks > * {
+    margin-bottom: 10px;
+}
+.add_task {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.add_task:hover{
+    background-color:white;
+}
+
+.completed {
+    background-color:lightgreen;
+}
