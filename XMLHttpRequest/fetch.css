@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+.container h1 {
+    width:100%;
+    background-image: linear-gradient(bisque, white);
+    outline: 2px solid brown;
+    margin-top: 20px;
+    text-align: center;
+    border-radius:20px;
+}
+.container h1:hover{
+    box-shadow:10px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.form-data {
+    width: 75%;
+    padding:10px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+#form  input:focus{
+    background-image:linear-gradient(bisque, lightskyblue);
+    color:black;
+    font-weight:bolder;
+}
+.form-data button {
+    margin-top:10px;
+    min-width:150px;
+}
+
+@media(max-width:800px){
+    .form-data {
+        width:100%;
+    }
+    .form-data button {
+        min-width:none;
+    }
+}
