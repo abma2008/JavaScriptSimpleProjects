@@ -152,10 +152,25 @@ function updateData(){
 
 // deleteAllData function():
 function deleteAllData(){
-    alert(`To delete:
-    - Must specify a specific record.
-    - you cannot delete all records at once
-    `)
+    fetch(`http://localhost:3000/items`)
+    .then(response =>{
+        return response.json();
+    }).then(data =>{
+        if(data.length ==0){
+            Swal.fire({
+                icon: `error`,
+                title: `No Data`, 
+                text: `No items to delete`,
+            });
+        }
+        else{
+            data.forEach(item =>{
+            fetch(`http://localhost:3000/items/${item.id}`, {method: `DELETE`})
+        })
+        alert(`All Data have been removed successfully one by one through forEach loop`)
+    }
+});
+    
 }
 
 // itemDelete function:

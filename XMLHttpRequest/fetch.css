@@ -43,4 +43,9 @@
     .form-data button {
         min-width:none;
     }
+    .show-data {
+        width:100%;
+        overflow-x: auto;
+        overflow-y: auto;
+    }
 }
