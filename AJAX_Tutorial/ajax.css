@@ -1,0 +1,77 @@
+/* css styling for ajax.html file */
+:root {
+    --header-color:rgb(204, 179, 148);
+    --container-color:rgb(203, 243, 203);
+    --body-color: rgb(173, 185, 156);
+    --outline-border: rgb(104, 36, 36);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:var(--body-color);
+}
+
+header {
+    background-image: linear-gradient(var(--header-color), var(--container-color));
+    min-height:100px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+.container {
+    background-color:var(--container-color);
+    margin-top:20px;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow:10px 2px 10px 2px;
+}
+
+#form input:focus{
+    background-color:var(--body-color);
+    outline: 2px solid var(--outline-border);
+}
+#form button {
+    margin-top:10px;
+    width:120px;
+}
+.container {
+    margin-bottom: 20px;
+}
+.container:hover{
+    box-shadow:10px 10px 10px 10px;
+    color:var(--outline-border);
+}
+#show-container {
+    display:none;
+}
+#show-data {
+    width:100%;
+    margin-bottom:20px;
+    padding:20px;
+}
+#data-table {
+    width:100%;
+    margin-top:10px;
+
+}
+#data-table thead {
+    background-color:brown;
+    color:yellow;
+}
+
+
+@media(max-width:800px){
+    .container {
+        width:100%;
+    }
+    #show-data{
+        width:100%;
+    }
+}

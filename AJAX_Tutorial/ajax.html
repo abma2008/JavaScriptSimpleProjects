@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- using bootstrap CDN for css and js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- using the local ajax.css -->
+    <link rel="stylesheet" href="ajax.css">
+    <title>This is AJAX Tutorial</title>
+</head>
+<body>
+    <header>
+        <h1>Using AJAX To GET, POST, PUT, and DELETE to ajax.json file</h1>
+    </header>
+    <div class="btn-display-form">
+        <button id="show-container" class="btn btn-outline-secondary m-2">Show Container</button>
+        <hr>
+    </div>
+    <div class="container" title="Hide me by Double-clicking">
+        
+        <form id="form" autocomplete="off" onsubmit="return false">
+            <label for="firstname">First Name:</label>
+            <input type="text" name="firstname" id="firstname" class="form-control">
+            <label for="lastname">Last Name:</label>
+            <input type="text" name="lastname" id="lastname" class="form-control">
+            <label for="phone">Phone Number:</label>
+            <input type="number" name="phone" id="phone" class="form-control">
+            <label for="email">Email Address:</label>
+            <input type="email" name="email" id="email" class="form-control">
+            <!-- This is the section for adding buttons: -->
+            <button id="postButton" class="btn btn-outline-success">Post Data</button>
+            <button id="hideShowBtn" class="btn btn-outline-primary">Hide Table</button>
+            <button id="updateButton" class="btn btn-outline-info">Update Data</button>
+            <button id="deleteButton" class="btn btn-outline-danger">Delete Data</button>
+        </form>
+
+        <div class="show-data">
+            <!-- this is the div that will handle displaying the information saved, displayed, updated, 
+            and deleted -->
+            <div style="overflow-x: auto;">
+                <table class="table table-responsive" id="data-table">
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- setting some source links for JQuery, SweetAlert2, local ajax.js, and ajax_jquery.js -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="ajax.js"></script>
+    <script src="ajax_jquery.js"></script>
+    
+</body>
+</html>
