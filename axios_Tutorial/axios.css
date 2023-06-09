@@ -1,0 +1,97 @@
+/* css styling for ajax.html file */
+:root {
+    --header-color:rgb(204, 179, 148);
+    --container-color:rgb(203, 243, 203);
+    --body-color: rgb(173, 185, 156);
+    --outline-border: rgb(104, 36, 36);
+    --general-color:rgb(189, 199, 211);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:var(--body-color);
+}
+
+header {
+    background-image: linear-gradient(var(--header-color), var(--container-color));
+    min-height:100px;
+    align-items: center;
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    border: 4px solid var(--general-color);
+    box-shadow:10px 10px 10px 10px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    margin-top:10p;
+    padding: 20px;
+    border: 2px black;
+    border-radius: 25px;
+    
+}
+
+#form {
+    width: 75%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color:var(--container-color);
+    transition:2s;
+    border-radius:20px;
+    box-shadow:10px 0 10px 0 10px;
+    border:4px solid var(--general-color)
+}
+#form input {
+    margin-bottom: 5px;
+}
+#form button{
+    width: 150px;
+}
+#form input:focus{
+    background-color: var(--header-color);
+    box-shadow:2px 2px 2px 2px;
+}
+.data-show {
+    width:75%;
+    margin: 0 auto;
+    margin-top:2px;
+    background-color:var(--general-color);
+    border-radius:20px;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height:500px;
+    transition:2s;
+
+}
+#table-data {
+    width:100%;
+    margin:0 auto;
+    cursor:pointer;
+    
+}
+#table-data thead {
+    background-image: linear-gradient(bisque,lightblue);
+}
+#table-data thead tbody{
+    padding:20px;
+}
+
+@media(max-width:700px){
+    #form {
+        width:100%;
+    }
+    #form button{
+        width:auto;
+    }
+    .data-show{
+        width:100%;
+    }
+}
